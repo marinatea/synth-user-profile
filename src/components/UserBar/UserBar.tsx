@@ -32,7 +32,7 @@ const UserBar: React.FC<UserBarProps> = ({ userName, avatarUrl }) => {
       </IconButton>
       <IconButton>
         <img src={Medium} alt="Medium" />
-      </IconButton>{" "}
+      </IconButton>
     </UserBarContainer>
   );
 };
