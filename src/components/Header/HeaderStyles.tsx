@@ -15,6 +15,7 @@ export const HeaderContainer = styled.header`
   align-items: center;
   margin: 0 auto;
   min-width: 375px;
+  font-family: "Open Sans", sans-serif;
 
   ${tablet(`
     padding-inline: 50px;
@@ -64,6 +65,7 @@ export const StyledNavLink = styled(NavLink)`
   color: ${colors.color.secondary};
   padding-bottom: 19px;
   transition: color 0.3s ease;
+  text-transform: uppercase;
 
   &.active {
     color: ${colors.color.primary};
