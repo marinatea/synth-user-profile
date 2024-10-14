@@ -12,6 +12,7 @@ import {
   IconButton,
 } from "./HeaderStyles";
 import UserBar from "../UserBar/UserBar";
+import { Link } from "react-router-dom";
 
 interface HeaderProps {
   userIndex: number;
@@ -37,9 +38,15 @@ const Header: React.FC<HeaderProps> = ({ userIndex }) => {
           </UserActions>
         </NavWrapper>
         <NavContainer>
-          <NavItem href="#">FEED</NavItem>
-          <NavItem href="#">EXPLORE</NavItem>
-          <NavItem href="#">DISCUSSIONS</NavItem>
+          <NavItem>
+            <Link to="/feed">Feed</Link>
+          </NavItem>
+          <NavItem>
+            <Link to="/explore">Explore</Link>
+          </NavItem>
+          <NavItem>
+            <Link to="/discussions">Discussions</Link>
+          </NavItem>
         </NavContainer>
         <AddButton />
       </HeaderContainer>
