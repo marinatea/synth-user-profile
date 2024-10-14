@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Arthur",
+      "lastName": "Wood",
+      "tag": "@arthurwood",
+      "synths": 12,
+      "followers": 250,
+      "followings": 180,
+      "avatarUrl": "/img/arthur.png"
+    }, 
+    {
+      "id": 2,
+      "firstName": "Benjamin",
+      "lastName": "Clementine",
+      "tag": "@benclementine",
+      "synths": 45,
+      "followers": 110,
+      "followings": 322,
+      "avatarUrl": "/img/benjamin.png"
+    },
+    {
+      "id": 3,
+      "firstName": "Piggy",
+      "lastName": "Kucyk",
+      "tag": "@piggy",
+      "synths": 20,
+      "followers": 300,
+      "followings": 200,
+      "avatarUrl": "/img/piggy.jfif"
+    }
+  ]
+}
