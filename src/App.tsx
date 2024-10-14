@@ -1,10 +1,13 @@
 import React from "react";
+import Header from "./components/Header/Header";
+import GlobalStyles from "./GlobalStyles";
 
 const App: React.FC = () => {
   return (
-    <div>
-      <h1>Hello, React with TypeScript!</h1>
-    </div>
+    <>
+      <GlobalStyles />
+      <Header userIndex={2} />
+    </>
   );
 };
 
