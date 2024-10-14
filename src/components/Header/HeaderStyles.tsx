@@ -9,7 +9,7 @@ export const HeaderContainer = styled.header`
   background-color: white;
   box-shadow: 0 1px 24px rgba(0, 0, 0, 0.2);
   padding-inline: 24px;
-  padding-top: 24px; 
+  padding-top: 24px;
   align-items: center;
   margin: 0 auto;
   gap: 23px;

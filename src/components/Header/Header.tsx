@@ -27,7 +27,7 @@ const Header: React.FC<HeaderProps> = ({ userIndex }) => {
           <IconButton>
             <img src={Logo} alt="Logo" />
           </IconButton>
-          <UserActions> 
+          <UserActions>
             {user && (
               <UserBar
                 userName={`${user.firstName} ${user.lastName}`}
