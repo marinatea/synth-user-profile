@@ -80,12 +80,11 @@ export const NavItem = styled.a`
     left: 0;
     width: 100%;
     height: 4px;
-    border-radius: 1px;
-    background-color: transparent;
+    border-radius: 2px;
     transform: scaleX(0);
     transform-origin: center;
     transition: transform 0.2s ease;
-    background-color: ${colors.color.red};
+    background: ${colors.color.gradient};
   }
 
   &:hover::after {
@@ -109,19 +108,4 @@ export const Avatar = styled.img`
   width: 32px;
   height: 32px;
   border-radius: 50%;
-`;
-
-export const AddButton = styled.button`
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background-color: #ff4081;
-  color: white;
-  font-size: 24px;
-  border: none;
-  cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 `;
