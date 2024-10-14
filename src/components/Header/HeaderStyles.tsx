@@ -8,17 +8,19 @@ export const HeaderContainer = styled.header`
   justify-content: space-between;
   background-color: white;
   box-shadow: 0 1px 24px rgba(0, 0, 0, 0.2);
+  height: 274px;
   padding-inline: 24px;
   padding-top: 24px;
   align-items: center;
   margin: 0 auto;
-  gap: 23px;
+  min-width: 375px;
 
   ${tablet(`
     padding-inline: 50px;
     padding-top: 24px;
     flex-direction: column;
     margin: 0 auto;
+    height: 112px;
   `)}
 
   ${desktop(`
@@ -42,22 +44,15 @@ export const NavWrapper = styled.div`
   `)}
 `;
 
-export const Logo = styled.div`
-  font-family: Open Sans;
-  font-size: 23px;
-  color: ${colors.color.primary};
-  align-items: center;
-`;
-
 export const NavContainer = styled.nav`
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 6px;
   width: 100%;
 
   ${tablet(`
-   justify-content: flex-start;
-   align-items: center;
+    flex-direction: row;
    gap: 36px;
   `)}
 `;
@@ -80,16 +75,19 @@ export const NavItem = styled.a`
     left: 0;
     width: 100%;
     height: 4px;
-    border-radius: 1px;
-    background-color: transparent;
+    border-radius: 2px;
     transform: scaleX(0);
-    transform-origin: center;
+    transform-origin: left;
     transition: transform 0.2s ease;
-    background-color: ${colors.color.red};
+    background: ${colors.color.gradient};
   }
 
   &:hover::after {
     transform: scaleX(1);
+
+    ${tablet(`
+     transform-origin: center;
+  `)}
   }
 `;
 
@@ -109,19 +107,4 @@ export const Avatar = styled.img`
   width: 32px;
   height: 32px;
   border-radius: 50%;
-`;
-
-export const AddButton = styled.button`
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background-color: #ff4081;
-  color: white;
-  font-size: 24px;
-  border: none;
-  cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 `;
