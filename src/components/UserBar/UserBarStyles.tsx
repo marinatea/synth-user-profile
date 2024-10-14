@@ -14,6 +14,7 @@ export const Avatar = styled.img`
 
 export const UserName = styled.span`
   font-weight: bold;
+  white-space: nowrap;
 `;
 
 export const IconButton = styled.button`

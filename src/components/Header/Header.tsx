@@ -41,8 +41,8 @@ const Header: React.FC<HeaderProps> = ({ userIndex }) => {
           <NavItem href="#">EXPLORE</NavItem>
           <NavItem href="#">DISCUSSIONS</NavItem>
         </NavContainer>
+        <AddButton />
       </HeaderContainer>
-      <AddButton />
     </>
   );
 };
