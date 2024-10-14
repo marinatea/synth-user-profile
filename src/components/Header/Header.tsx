@@ -1,13 +1,13 @@
 import React from "react";
 import userData from "../../userData.json";
 import Logo from "../../assets/icons/logo.svg";
+import AddButton from "../AddButton/AddButton";
 
 import {
   HeaderContainer,
   NavContainer,
   NavItem,
   UserActions,
-  AddButton,
   NavWrapper,
   IconButton,
 } from "./HeaderStyles";
@@ -41,8 +41,8 @@ const Header: React.FC<HeaderProps> = ({ userIndex }) => {
           <NavItem href="#">EXPLORE</NavItem>
           <NavItem href="#">DISCUSSIONS</NavItem>
         </NavContainer>
+        <AddButton />
       </HeaderContainer>
-      <AddButton>+</AddButton>
     </>
   );
 };
