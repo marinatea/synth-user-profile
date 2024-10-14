@@ -3,3 +3,4 @@ node_modules/
 .lh/
 
 package-lock.json
+src/custom.d.ts
