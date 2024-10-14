@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { tablet, desktop } from "../../styles/mixins";
 import { colors } from "../../styles/colors";
+import { NavLink } from "react-router-dom";
 
 export const HeaderContainer = styled.header`
   display: flex;
@@ -57,15 +58,19 @@ export const NavContainer = styled.nav`
   `)}
 `;
 
-export const NavItem = styled.a`
+export const StyledNavLink = styled(NavLink)`
   text-decoration: none;
   position: relative;
   color: ${colors.color.secondary};
   padding-bottom: 19px;
+  transition: color 0.3s ease;
+
+  &.active {
+    color: ${colors.color.primary};
+  }
 
   &:hover {
     color: ${colors.color.primary};
-    transition: width 1s ease;
   }
 
   &::after {
@@ -78,17 +83,23 @@ export const NavItem = styled.a`
     border-radius: 2px;
     transform: scaleX(0);
     transform-origin: left;
-    transition: transform 0.2s ease;
-    background: ${colors.color.gradient};
+    transition: transform 0.3s ease;
+  }
+
+  &.active::after {
+    transform: scaleX(1);
   }
 
   &:hover::after {
-    transform: scaleX(1);
-
-    ${tablet(`
-     transform-origin: center;
-  `)}
+    color: ${colors.color.primary};
   }
+
+  ${tablet(`
+  &::after {
+    transform-origin: center;
+      background: ${colors.color.gradient};
+  }
+`)}
 `;
 
 export const UserActions = styled.div`

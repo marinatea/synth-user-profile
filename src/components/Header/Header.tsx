@@ -6,13 +6,12 @@ import AddButton from "../AddButton/AddButton";
 import {
   HeaderContainer,
   NavContainer,
-  NavItem,
   UserActions,
   NavWrapper,
   IconButton,
+  StyledNavLink,
 } from "./HeaderStyles";
 import UserBar from "../UserBar/UserBar";
-import { Link } from "react-router-dom";
 
 interface HeaderProps {
   userIndex: number;
@@ -38,15 +37,27 @@ const Header: React.FC<HeaderProps> = ({ userIndex }) => {
           </UserActions>
         </NavWrapper>
         <NavContainer>
-          <NavItem>
-            <Link to="/feed">Feed</Link>
-          </NavItem>
-          <NavItem>
-            <Link to="/explore">Explore</Link>
-          </NavItem>
-          <NavItem>
-            <Link to="/discussions">Discussions</Link>
-          </NavItem>
+
+          <StyledNavLink
+            to="/feed"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            Feed
+          </StyledNavLink>
+
+          <StyledNavLink
+            to="/explore"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            Explore
+          </StyledNavLink>
+
+          <StyledNavLink
+            to="/discussions"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            Discussions
+          </StyledNavLink>
         </NavContainer>
         <AddButton />
       </HeaderContainer>
