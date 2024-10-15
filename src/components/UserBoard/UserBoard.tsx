@@ -40,6 +40,16 @@ const UserProfile: React.FC<UserProfileProps> = ({ userIndex }) => {
   const toggleMenu = () => {
     setMenuVisible((prev) => !prev);
   };
+
+  const handleMenuAction = (action: "report" | "block") => {
+    if (action === "report") {
+      alert("User reported");
+    } else if (action === "block") {
+      alert("User blocked");
+    }
+    setMenuVisible(false);
+  };
+
   return (
     <ProfileContainer>
       <DataWrapper>
@@ -50,13 +60,11 @@ const UserProfile: React.FC<UserProfileProps> = ({ userIndex }) => {
           </MenuButton>
           {menuVisible && (
             <MenuContainer visible={menuVisible}>
-              <ActionButton onClick={() => alert("Report User")}>
-                {" "}
+              <ActionButton onClick={() => handleMenuAction("report")}>
                 <img src={Report} alt="report" />
                 Report User
               </ActionButton>
-              <ActionButton onClick={() => alert("Block User")}>
-                {" "}
+              <ActionButton onClick={() => handleMenuAction("block")}>
                 <img src={Block} alt="" />
                 Block User
               </ActionButton>
