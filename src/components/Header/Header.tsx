@@ -6,10 +6,10 @@ import AddButton from "../AddButton/AddButton";
 import {
   HeaderContainer,
   NavContainer,
-  NavItem,
   UserActions,
   NavWrapper,
   IconButton,
+  StyledNavLink,
 } from "./HeaderStyles";
 import UserBar from "../UserBar/UserBar";
 
@@ -37,9 +37,26 @@ const Header: React.FC<HeaderProps> = ({ userIndex }) => {
           </UserActions>
         </NavWrapper>
         <NavContainer>
-          <NavItem href="#">FEED</NavItem>
-          <NavItem href="#">EXPLORE</NavItem>
-          <NavItem href="#">DISCUSSIONS</NavItem>
+          <StyledNavLink
+            to="/feed"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            Feed
+          </StyledNavLink>
+
+          <StyledNavLink
+            to="/explore"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            Explore
+          </StyledNavLink>
+
+          <StyledNavLink
+            to="/discussions"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            Discussions
+          </StyledNavLink>
         </NavContainer>
         <AddButton />
       </HeaderContainer>
