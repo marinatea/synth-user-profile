@@ -95,7 +95,6 @@ export const UserHandle = styled.p`
 `;
 
 export const EditProfileButton = styled.button`
-  text-decoration: none;
   background: none;
   border: none;
   cursor: pointer;
@@ -108,6 +107,12 @@ export const EditProfileButton = styled.button`
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
+
+  
+  &:hover {
+    color: ${colors.color.primary};
+    transition: opacity 0.5s ease;
+  }
 `;
 
 export const StatsContainer = styled.div`
