@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { colors } from "../../styles/colors";
+import { tablet } from "../../styles/mixins";
 
 export const ProfileContainer = styled.div`
   display: flex;
@@ -36,11 +37,16 @@ export const MenuContainer = styled.div<{ visible: boolean }>`
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 8px;
   position: absolute;
-  right: -350px;
-  top: 30px;
+  right: -190px;
+  top: 38px;
   z-index: 1;
   width: 176px;
   height: 124px;
+
+  ${tablet(`
+     right: -355px;
+     top: 30px;
+  `)}
 `;
 
 export const ActionButton = styled.button`
@@ -86,11 +92,11 @@ export const UserName = styled.h2`
   font-weight: 600;
   line-height: 26px;
   text-align: left;
+  color: ${colors.color.primary};
 `;
 
 export const UserHandle = styled.p`
-  font-size: 1rem;
-  color: #666;
+  color: ${colors.color.primary};
   margin-bottom: 8px;
 `;
 
@@ -108,7 +114,6 @@ export const EditProfileButton = styled.button`
   font-weight: 400;
   line-height: 20px;
 
-  
   &:hover {
     color: ${colors.color.primary};
     transition: opacity 0.5s ease;
@@ -118,23 +123,20 @@ export const EditProfileButton = styled.button`
 export const StatsContainer = styled.div`
   display: flex;
   justify-content: flex-start;
-  align-items: center;
   width: 100%;
   margin-bottom: 24px;
-  gap: 20%;
+  gap: 12%;
 `;
 
 export const StatItem = styled.div`
   text-align: center;
+  color: ${colors.color.primary};
+  font-size: 16px;
 `;
 
 export const StatValue = styled.div`
   font-weight: bold;
-`;
-
-export const StatLabel = styled.div`
-  font-size: 0.8rem;
-  color: #666;
+  font-size: 16px;
 `;
 
 export const Bio = styled.p`
