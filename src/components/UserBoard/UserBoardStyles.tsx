@@ -28,11 +28,40 @@ export const AvatarWrapper = styled.div`
   position: relative;
 `;
 
-export const Avatar = styled.img`
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
+export const MenuContainer = styled.div<{ visible: boolean }>`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  position: absolute;
+  right: -350px;
+  top: 30px;
+  z-index: 1;
+  width: 176px;
+  height: 124px;
+`;
+
+export const ActionButton = styled.button`
+  border: none;
+  padding: 8px 24px;
+  cursor: pointer;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 18.75px;
+  text-align: left;
+  height: 38px;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  transition: background-color 0.5s ease, transform 0.5s ease;
+
+  &:hover {
+    background: #ecf1f8;
+    transition: opacity 0.3s ease;
+  }
 `;
 
 export const MenuButton = styled.button`
@@ -43,6 +72,13 @@ export const MenuButton = styled.button`
   position: absolute;
   top: 0;
   right: -170%;
+`;
+
+export const Avatar = styled.img`
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
 `;
 
 export const UserName = styled.h2`
@@ -102,14 +138,4 @@ export const Bio = styled.p`
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
-`;
-
-export const ActionButton = styled.button`
-  background-color: #f0f0f0;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 4px;
-  cursor: pointer;
-  margin: 0 5px;
-  font-size: 0.9rem;
 `;
