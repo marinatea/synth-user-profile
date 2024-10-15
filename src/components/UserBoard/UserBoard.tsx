@@ -14,7 +14,6 @@ import {
   StatsContainer,
   StatItem,
   StatValue,
-  StatLabel,
   Bio,
   ActionButton,
   DataWrapper,
@@ -90,15 +89,15 @@ const UserProfile: React.FC<UserProfileProps> = ({ userIndex }) => {
       <StatsContainer>
         <StatItem>
           <StatValue>{user.synths}</StatValue>
-          <StatLabel>synths</StatLabel>
+          synths
         </StatItem>
         <StatItem>
           <StatValue>{user.followers}</StatValue>
-          <StatLabel>followers</StatLabel>
+          followers
         </StatItem>
         <StatItem>
           <StatValue>{user.followings}</StatValue>
-          <StatLabel>following</StatLabel>
+          following
         </StatItem>
       </StatsContainer>
 
