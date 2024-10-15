@@ -1,54 +1,86 @@
 import styled from "styled-components";
+import { colors } from "../../styles/colors";
 
 export const ProfileContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
   background-color: white;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  background-color: ${colors.color.light};
 `;
 
-export const AvatarContainer = styled.div`
+export const DataWrapper = styled.div`
+  display: flex;
+  gap: 24px;
+`;
+
+export const DataBlock = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+`;
+
+export const AvatarWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
   position: relative;
-  margin-bottom: 10px;
 `;
 
 export const Avatar = styled.img`
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
 `;
 
-export const EditProfileButton = styled.button`
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  background-color: white;
-  border: 1px solid #ccc;
-  border-radius: 50%;
-  padding: 5px;
+export const MenuButton = styled.button`
+  text-decoration: none;
+  background: none;
+  border: none;
   cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: -170%;
 `;
 
 export const UserName = styled.h2`
-  font-size: 1.5rem;
-  margin: 0 0 5px 0;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 26px;
+  text-align: left;
 `;
 
 export const UserHandle = styled.p`
   font-size: 1rem;
   color: #666;
-  margin: 0 0 15px 0;
+  margin-bottom: 8px;
+`;
+
+export const EditProfileButton = styled.button`
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  text-decoration: underline;
+  color: ${colors.color.red};
+  font-family: Open Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
 `;
 
 export const StatsContainer = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
+  align-items: center;
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 24px;
+  gap: 20%;
 `;
 
 export const StatItem = styled.div`
@@ -65,8 +97,11 @@ export const StatLabel = styled.div`
 `;
 
 export const Bio = styled.p`
-  text-align: center;
-  margin-bottom: 15px;
+  text-align: left;
+  font-family: Open Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
 `;
 
 export const ActionButton = styled.button`

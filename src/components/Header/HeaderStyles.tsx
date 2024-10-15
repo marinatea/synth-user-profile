@@ -16,6 +16,8 @@ export const HeaderContainer = styled.header`
   margin: 0 auto;
   min-width: 375px;
   font-family: "Open Sans", sans-serif;
+  position: relative;
+  z-index: 1;
 
   ${tablet(`
     padding-inline: 50px;
