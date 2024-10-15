@@ -29,12 +29,7 @@ interface UserProfileProps {
 
 const UserProfile: React.FC<UserProfileProps> = ({ userIndex }) => {
   const user = userData.users[userIndex];
-  const [editMenuVisible, setEditMenuVisible] = useState(false);
   const [menuVisible, setMenuVisible] = useState(false);
-
-  const toggleEditMenu = () => {
-    setEditMenuVisible((prev) => !prev);
-  };
 
   const toggleMenu = () => {
     setMenuVisible((prev) => !prev);
@@ -64,7 +59,7 @@ const UserProfile: React.FC<UserProfileProps> = ({ userIndex }) => {
                 Report User
               </ActionButton>
               <ActionButton onClick={() => handleMenuAction("block")}>
-                <img src={Block} alt="" />
+                <img src={Block} alt="block" />
                 Block User
               </ActionButton>
             </MenuContainer>
@@ -73,19 +68,12 @@ const UserProfile: React.FC<UserProfileProps> = ({ userIndex }) => {
         <DataBlock>
           <UserName>{`${user.firstName} ${user.lastName}`}</UserName>
           <UserHandle>{user.tag}</UserHandle>
-          <EditProfileButton onClick={toggleEditMenu}>
+          <EditProfileButton>
             <img src={Edit} alt="edit" />
             Edit profile
           </EditProfileButton>
         </DataBlock>
       </DataWrapper>
-      {editMenuVisible && (
-        <MenuContainer visible={menuVisible}>
-          <ActionButton onClick={() => alert("Edit User")}>
-            Edit User
-          </ActionButton>
-        </MenuContainer>
-      )}
       <StatsContainer>
         <StatItem>
           <StatValue>{user.synths}</StatValue>
