@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   ProfileContainer,
   AvatarContainer,
@@ -11,8 +11,8 @@ import {
   StatValue,
   StatLabel,
   Bio,
-  ActionButton
-} from './UserBoardStyles';
+  ActionButton,
+} from "./UserBoardStyles";
 
 interface UserProfileProps {
   name: string;
@@ -31,7 +31,7 @@ const UserProfile: React.FC<UserProfileProps> = ({
   synths,
   followers,
   following,
-  bio
+  bio,
 }) => {
   return (
     <ProfileContainer>

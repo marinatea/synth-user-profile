@@ -37,7 +37,6 @@ const Header: React.FC<HeaderProps> = ({ userIndex }) => {
           </UserActions>
         </NavWrapper>
         <NavContainer>
-
           <StyledNavLink
             to="/feed"
             className={({ isActive }) => (isActive ? "active" : "")}
