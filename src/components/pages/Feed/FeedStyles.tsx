@@ -7,15 +7,25 @@ export const FeedWrapper = styled.div`
   background-color: ${colors.color.light};
   height: 100vh;
   width: 100%;
-  display: flex;
-  align-items: flex-start;
-  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr;
+  overflow: auto;
+  align-content: flex-start;
 
   ${tablet(`
      padding: 64px 64px;
+     grid-template-columns: 2fr;
+     gap: 47px;
   `)}
 
   ${desktop(`
      padding: 72px 136px;
+     grid-template-columns: 1fr 3fr;
   `)}
+`;
+
+export const CardWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
 `;
