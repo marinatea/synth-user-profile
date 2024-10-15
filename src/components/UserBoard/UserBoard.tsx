@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import userData from "../../userData.json";
 import Edit from "../../assets/icons/icon_edit.svg";
 import Menu from "../../assets/icons/icon_3dots.svg";
-import Report from '../../assets/icons/report.svg';
-import Block from '../../assets/icons/hide.svg'
+import Report from "../../assets/icons/report.svg";
+import Block from "../../assets/icons/hide.svg";
 
 import {
   ProfileContainer,
@@ -49,11 +49,15 @@ const UserProfile: React.FC<UserProfileProps> = ({ userIndex }) => {
             <img src={Menu} alt="menu" />
           </MenuButton>
           {menuVisible && (
-            <MenuContainer>
-              <ActionButton onClick={() => alert("Report User")}> <img src={Report} alt="report" />
+            <MenuContainer visible={menuVisible}>
+              <ActionButton onClick={() => alert("Report User")}>
+                {" "}
+                <img src={Report} alt="report" />
                 Report User
               </ActionButton>
-              <ActionButton onClick={() => alert("Block User")}> <img src={Block} alt="" />
+              <ActionButton onClick={() => alert("Block User")}>
+                {" "}
+                <img src={Block} alt="" />
                 Block User
               </ActionButton>
             </MenuContainer>
@@ -69,7 +73,7 @@ const UserProfile: React.FC<UserProfileProps> = ({ userIndex }) => {
         </DataBlock>
       </DataWrapper>
       {editMenuVisible && (
-        <MenuContainer>
+        <MenuContainer visible={menuVisible}>
           <ActionButton onClick={() => alert("Edit User")}>
             Edit User
           </ActionButton>

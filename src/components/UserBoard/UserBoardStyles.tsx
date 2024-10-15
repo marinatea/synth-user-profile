@@ -28,10 +28,10 @@ export const AvatarWrapper = styled.div`
   position: relative;
 `;
 
-export const MenuContainer = styled.div`
+export const MenuContainer = styled.div<{ visible: boolean }>`
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 8px;
@@ -45,7 +45,7 @@ export const MenuContainer = styled.div`
 
 export const ActionButton = styled.button`
   border: none;
-  padding: 8px 12px;
+  padding: 8px 24px;
   cursor: pointer;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
@@ -56,6 +56,7 @@ export const ActionButton = styled.button`
   display: flex;
   gap: 16px;
   width: 100%;
+  transition: background-color 0.5s ease, transform 0.5s ease;
 
   &:hover {
     background: #ecf1f8;
