@@ -6,10 +6,14 @@ export const ProfileContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: white;
   border-radius: 8px;
   width: 350px;
   background-color: ${colors.color.light};
+  margin-bottom: 24px;
+
+  ${tablet(`
+    margin: 0;
+  `)}
 `;
 
 export const DataWrapper = styled.div`
@@ -42,6 +46,7 @@ export const MenuContainer = styled.div<{ visible: boolean }>`
   z-index: 1;
   width: 176px;
   height: 124px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 
   ${tablet(`
      right: -355px;
@@ -137,12 +142,4 @@ export const StatItem = styled.div`
 export const StatValue = styled.div`
   font-weight: bold;
   font-size: 16px;
-`;
-
-export const Bio = styled.p`
-  text-align: left;
-  font-family: Open Sans;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
 `;

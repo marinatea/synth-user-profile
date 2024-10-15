@@ -14,7 +14,6 @@ import {
   StatsContainer,
   StatItem,
   StatValue,
-  Bio,
   ActionButton,
   DataWrapper,
   DataBlock,
@@ -88,8 +87,7 @@ const UserProfile: React.FC<UserProfileProps> = ({ userIndex }) => {
           following
         </StatItem>
       </StatsContainer>
-
-      <Bio>{user.bio}</Bio>
+      <p>{user.bio}</p>
     </ProfileContainer>
   );
 };
