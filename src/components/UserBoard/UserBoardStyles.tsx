@@ -6,11 +6,14 @@ export const ProfileContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: white;
   border-radius: 8px;
   width: 350px;
   background-color: ${colors.color.light};
   margin-bottom: 24px;
+
+  ${tablet(`
+    margin: 0;
+  `)}
 `;
 
 export const DataWrapper = styled.div`
@@ -140,4 +143,3 @@ export const StatValue = styled.div`
   font-weight: bold;
   font-size: 16px;
 `;
-

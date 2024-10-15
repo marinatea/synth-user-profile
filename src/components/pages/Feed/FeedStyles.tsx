@@ -11,6 +11,7 @@ export const FeedWrapper = styled.div`
   grid-template-columns: 1fr;
   overflow: auto;
   align-content: flex-start;
+  
 
   ${tablet(`
      padding: 64px 64px;
@@ -19,7 +20,7 @@ export const FeedWrapper = styled.div`
   `)}
 
   ${desktop(`
-     padding: 72px 136px;
+     padding: 72px 135px;
      grid-template-columns: 1fr 3fr;
   `)}
 `;

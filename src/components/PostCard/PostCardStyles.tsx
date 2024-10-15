@@ -1,12 +1,10 @@
 import styled from "styled-components";
 
 export const Card = styled.div`
-  background-color: white;
   border-radius: 8px;
-  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   width: 374px;
   height: 280px;
-  overflow: hidden;
   padding: 0px 24px 0px 24px;
   cursor: pointer;
 `;
