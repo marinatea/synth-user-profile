@@ -7,7 +7,7 @@ export const HeaderContainer = styled.header`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: white;
+  background-color: ${colors.color.white};
   box-shadow: 0 1px 24px rgba(0, 0, 0, 0.2);
   height: 274px;
   padding-inline: 24px;

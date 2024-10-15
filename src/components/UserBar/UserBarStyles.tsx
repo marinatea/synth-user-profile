@@ -22,7 +22,6 @@ export const IconButton = styled.button`
   border: none;
   cursor: pointer;
   font-size: 18px;
-  color: #555;
   display: flex;
   align-items: center;
   justify-content: center;
