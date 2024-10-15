@@ -1,7 +1,9 @@
 import React from "react";
+import userData from "../../userData.json";
+import Edit from "../../assets/icons/icon_edit.svg";
+import Menu from "../../assets/icons/icon_3dots.svg";
 import {
   ProfileContainer,
-  AvatarContainer,
   Avatar,
   EditProfileButton,
   UserName,
@@ -11,55 +13,58 @@ import {
   StatValue,
   StatLabel,
   Bio,
-  ActionButton,
+  // ActionButton,
+  DataWrapper,
+  DataBlock,
+  MenuButton,
+  AvatarWrapper,
 } from "./UserBoardStyles";
 
 interface UserProfileProps {
-  name: string;
-  handle: string;
-  avatarUrl: string;
-  synths: number;
-  followers: number;
-  following: number;
-  bio: string;
+  userIndex: number;
 }
 
-const UserProfile: React.FC<UserProfileProps> = ({
-  name,
-  handle,
-  avatarUrl,
-  synths,
-  followers,
-  following,
-  bio,
-}) => {
+const UserProfile: React.FC<UserProfileProps> = ({ userIndex }) => {
+  const user = userData.users[userIndex];
+
   return (
     <ProfileContainer>
-      <AvatarContainer>
-        <Avatar src={avatarUrl} alt={`${name}'s avatar`} />
-        <EditProfileButton>✏️</EditProfileButton>
-      </AvatarContainer>
-      <UserName>{name}</UserName>
-      <UserHandle>@{handle}</UserHandle>
+      <DataWrapper>
+        <AvatarWrapper>
+        <Avatar src={user.avatarUrl} alt="avatar" />
+        <MenuButton>
+          <img src={Menu} alt="menu" />
+          </MenuButton>
+          </AvatarWrapper>
+        <DataBlock>
+          <UserName>{`${user.firstName} ${user.lastName}`}</UserName>
+          <UserHandle>{user.tag}</UserHandle>
+          <EditProfileButton>
+            <img src={Edit} alt="edit" />
+            Edit profile
+          </EditProfileButton>
+        </DataBlock>
+      </DataWrapper>
+
       <StatsContainer>
         <StatItem>
-          <StatValue>{synths}</StatValue>
+          <StatValue>{user.synths}</StatValue>
           <StatLabel>synths</StatLabel>
         </StatItem>
         <StatItem>
-          <StatValue>{followers}</StatValue>
+          <StatValue>{user.followers}</StatValue>
           <StatLabel>followers</StatLabel>
         </StatItem>
         <StatItem>
-          <StatValue>{following}</StatValue>
+          <StatValue>{user.followings}</StatValue>
           <StatLabel>following</StatLabel>
         </StatItem>
       </StatsContainer>
-      <Bio>{bio}</Bio>
-      <div>
-        <ActionButton>Report User</ActionButton>
-        <ActionButton>Block User</ActionButton>
-      </div>
+
+      <Bio>{user.bio}</Bio>
+
+      {/* <ActionButton>Report User</ActionButton>
+      <ActionButton>Block User</ActionButton> */}
     </ProfileContainer>
   );
 };

@@ -1,11 +1,12 @@
 import React from "react";
+import { DiscussionsWrapper } from "./DiscussionsStyles";
 
 const Discussions: React.FC = () => {
   return (
-    <div>
+    <DiscussionsWrapper>
       <h1>Discussions</h1>
       <p>This is the discussions page.</p>
-    </div>
+    </DiscussionsWrapper>
   );
 };
 

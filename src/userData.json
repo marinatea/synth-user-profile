@@ -8,8 +8,9 @@
       "synths": 12,
       "followers": 250,
       "followings": 180,
-      "avatarUrl": "/img/arthur.png"
-    }, 
+      "avatarUrl": "/img/arthur.png",
+      "bio": "Cryptocurrencies including Ethereum, Ripple, and Litecoin have all plunged between 20 to 30 percent each, according to CoinMarketCap. Here is the latest Ripple price news and live updates on XRP, bitcoin and Ethereum."
+    },
     {
       "id": 2,
       "firstName": "Benjamin",
@@ -18,7 +19,8 @@
       "synths": 45,
       "followers": 110,
       "followings": 322,
-      "avatarUrl": "/img/benjamin.png"
+      "avatarUrl": "/img/benjamin.png",
+      "bio": "Cryptocurrencies including Ethereum, Ripple, and Litecoin have all plunged between 20 to 30 percent each, according to CoinMarketCap. Here is the latest Ripple price news and live updates on XRP, bitcoin and Ethereum."
     },
     {
       "id": 3,
@@ -28,7 +30,8 @@
       "synths": 20,
       "followers": 300,
       "followings": 200,
-      "avatarUrl": "/img/piggy.jfif"
+      "avatarUrl": "/img/piggy.jfif",
+      "bio": "Cryptocurrencies including Ethereum, Ripple, and Litecoin have all plunged between 20 to 30 percent each, according to CoinMarketCap. Here is the latest Ripple price news and live updates on XRP, bitcoin and Ethereum."
     }
   ]
 }
