@@ -14,7 +14,7 @@ export const AddButtonStyles = styled.button`
   align-items: center;
   justify-content: center;
 
-  color: white;
+  color: ${colors.color.white};
   font-size: 24px;
   border: none;
   cursor: pointer;

@@ -65,7 +65,7 @@ export const ActionButton = styled.button`
   transition: background-color 0.5s ease, transform 0.5s ease;
 
   &:hover {
-    background: #ecf1f8;
+    background: ${colors.color.light};
     transition: opacity 0.3s ease;
   }
 `;
