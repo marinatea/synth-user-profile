@@ -24,9 +24,9 @@ export const AddButtonStyles = styled.button`
   }
 
   ${tablet(`
-  top: calc(80px);
-  width: 64px;
-  height: 64px;
+    top: calc(80px);
+    width: 64px;
+    height: 64px;
   `)}
 `;
 
