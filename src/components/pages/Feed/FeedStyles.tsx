@@ -11,7 +11,7 @@ export const FeedWrapper = styled.div`
   grid-template-columns: 1fr;
   overflow: auto;
   align-content: flex-start;
-  
+  margin: 0 auto;
 
   ${tablet(`
      padding: 64px 64px;
@@ -29,4 +29,5 @@ export const CardWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
+  justify-content: center;
 `;
