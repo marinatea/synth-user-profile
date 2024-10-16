@@ -1,32 +1,42 @@
 {
   "posts": [
     {
-      "author": "Jan Kowalski",
+      "author": "Marcelina Skoczek",
       "avatar": "/img/arthur.png",
       "title": "New air routes that promise cheap flights in March!",
-      "likes": 42,
-      "shares": 10
+      "shareMethod": null
     },
     {
-      "author": "Anna Nowak",
-      "avatar": "/img/benjamin.png",
-      "title": "New air routes that promise cheap flights in October!",
-      "likes": 75,
-      "shares": 25
+      "author": "Witold Czerwony",
+      "avatar": "/img/anna.png",
+      "title": "New air routes that promise cheap flights in March!",
+      "shareMethod": null
     },
     {
-      "author": "Piotr Wiśniewski",
-      "avatar": "/img/piggy.jfif",
+      "author": "Panda Wygodnicka",
+      "avatar": "/img/panda.png",
       "title": "New air routes that promise cheap flights in May!",
-      "likes": 30,
-      "shares": 15
+      "shareMethod": {
+        "type": "hashtag",
+        "label": "Shared to #discussionaboutanimgttdddgggg"
+      },
+      "reactions": {
+        "likes": 88,
+        "shares": 10
+      }
     },
     {
       "author": "Piggy Kucyk",
-      "avatar": "/img/piggy.jfif",
-      "title": "New air routes that promise cheap flights on Piggy Island!",
-      "likes": 30,
-      "shares": 15
+      "avatar": "/img/piggy.png",
+      "title": "New air route with cheap flights to Piggy Island!",
+      "shareMethod": {
+        "type": "weblink",
+        "label": "Shared via weblink"
+      },
+      "reactions": {
+        "shares": 357,
+        "likes": 24
+      }
     }
   ]
 }

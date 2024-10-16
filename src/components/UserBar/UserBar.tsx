@@ -13,6 +13,7 @@ import {
   IconButton,
   MenuContainer,
   ActionButton,
+  IconButt,
 } from "./UserBarStyles";
 
 interface UserBarProps {
@@ -41,9 +42,9 @@ const UserBar: React.FC<UserBarProps> = ({ userName, avatarUrl }) => {
       <Avatar src={avatarUrl} alt="User avatar" />
       <UserName>{userName}</UserName>
 
-      <IconButton onClick={toggleMenu} aria-label="Toggle edit">
+      <IconButt onClick={toggleMenu} aria-label="Toggle edit">
         <img src={Arrow} alt="Arrow icon" />
-      </IconButton>
+      </IconButt>
       {menuVisible && (
         <MenuContainer visible={menuVisible}>
           <ActionButton onClick={() => handleMenuAction("report")}>

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { tablet } from "../../styles/mixins";
 import { colors } from "../../styles/colors";
 
@@ -12,6 +12,11 @@ export const Avatar = styled.img`
   width: 32px;
   height: 32px;
   border-radius: 50%;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.2);
+  }
 `;
 
 export const UserName = styled.span`
@@ -19,7 +24,29 @@ export const UserName = styled.span`
   white-space: nowrap;
 `;
 
+const shake = keyframes`
+  0% { transform: translate(0); }
+  25% { transform: translate(-1px, 1px); }
+  50% { transform: translate(-1px, -1px); }
+  75% { transform: translate(1px, 1px); }
+  100% { transform: translate(0); }
+`;
+
 export const IconButton = styled.button`
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    animation: ${shake} 0.5s infinite;
+  }
+`;
+
+export const IconButt = styled.button`
   background: none;
   border: none;
   cursor: pointer;

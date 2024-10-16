@@ -38,7 +38,7 @@ export const MenuContainer = styled.div<{ visible: boolean }>`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: ${colors.color.white};
   border-radius: 8px;
   position: absolute;
   right: -190px;
@@ -63,7 +63,7 @@ export const ActionButton = styled.button`
   line-height: 18.75px;
   text-align: left;
   height: 38px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: ${colors.color.white};
   display: flex;
   gap: 16px;
   width: 100%;
