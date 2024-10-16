@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { colors } from "../../../styles/colors";
-import { desktop, tablet } from "../../../styles/mixins";
+import { colors } from "../../styles/colors";
+import { desktop, tablet } from "../../styles/mixins";
 
 export const FeedWrapper = styled.div`
   padding: 54px 24px;

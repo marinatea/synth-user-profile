@@ -1,15 +1,15 @@
 import React from "react";
 import Header from "./components/Header/Header";
 import GlobalStyles from "./GlobalStyles";
-import Feed from "./components/pages/Feed/Feed";
+import Feed from "./pages/Feed/Feed";
 import {
   BrowserRouter as Router,
   Routes,
   Route,
   Navigate,
 } from "react-router-dom";
-import Explore from "./components/pages/Explore/Explore";
-import Discussions from "./components/pages/Discussions/Discussions";
+import Explore from "./pages/Explore/Explore";
+import Discussions from "./pages/Discussions/Discussions";
 
 const App: React.FC = () => {
   return (

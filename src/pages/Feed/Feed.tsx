@@ -1,8 +1,8 @@
 import React from "react";
-import UserBoard from "../../UserBoard/UserBoard";
-import { CardWrapper, FeedWrapper } from "./FeedStyles";
-import PostCard from "../../PostCard/PostCard";
-import postData from "../../../postData.json";
+import UserBoard from "../../components/UserBoard/UserBoard";
+import { CardWrapper, FeedWrapper } from "../Feed/FeedStyles";
+import PostCard from "../../components/PostCard/PostCard";
+import postData from "../../postData.json";
 
 const Feed: React.FC = () => {
   return (
