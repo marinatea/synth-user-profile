@@ -20,8 +20,7 @@ const Feed: React.FC = () => {
               title={post.title}
               shareMethod={post.shareMethod || null}
               likes={post.reactions?.likes ?? 0}
-              shares={post.reactions?.shares ?? 0}
-            />
+              shares={post.reactions?.shares ?? 0}        />
           ))}
         </CardWrapper>
       </main>

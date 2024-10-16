@@ -5,11 +5,11 @@ import { desktop, tablet } from "../../styles/mixins";
 export const FeedWrapper = styled.div`
   padding: 54px 24px;
   background-color: ${colors.color.light};
-  height: 100vh;
+  height: calc(100vh - 112px);
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  overflow-y: auto; /* Zmiana na overflow-y dla lepszej kontroli */
+  overflow-y: auto;
   align-content: flex-start;
   margin: 0 auto;
 

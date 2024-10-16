@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { colors } from "../../styles/colors";
 
-export const Card = styled.div`
+export const Card = styled.article`
   border-radius: 8px;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   width: 374px;
@@ -13,7 +13,7 @@ export const Card = styled.div`
   transition: transform 0.3s ease;
 
   &:hover {
-    transform: scale(1.01);
+    transform: scale(2);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   }
 `;

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { colors } from "../../styles/colors";
 import { tablet } from "../../styles/mixins";
 
-export const ProfileContainer = styled.div`
+export const ProfileContainer = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -90,6 +90,11 @@ export const Avatar = styled.img`
   height: 120px;
   border-radius: 50%;
   object-fit: cover;
+    transition: transform 0.5s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
 export const UserName = styled.h2`

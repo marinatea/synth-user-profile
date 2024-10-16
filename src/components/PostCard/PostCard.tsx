@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Avatar,
   Card,
@@ -36,6 +36,8 @@ const PostCard: React.FC<PostCardProps> = ({
   shares,
   shareMethod,
 }) => {
+  const [isFlipped, setIsFlipped] = useState(false);
+
   const renderShareMethod = (label: string) => {
     const parts = label.split(" ");
     return (
@@ -54,8 +56,18 @@ const PostCard: React.FC<PostCardProps> = ({
     );
   };
 
+  const toggleFlip = () => {
+    setIsFlipped((prev) => !prev);
+  };
+
   return (
-    <Card>
+    <Card
+      onClick={toggleFlip}
+      style={{
+        transform: isFlipped ? "rotateY(180deg)" : "rotateY(0)",
+        transition: "transform 0.6s",
+      }}
+    >
       <CardHeader>
         {shareMethod && (
           <ShareMethod>
@@ -65,6 +77,7 @@ const PostCard: React.FC<PostCardProps> = ({
         )}
         <Title>{title}</Title>
       </CardHeader>
+
       <CardFooter>
         <UserWrapper>
           <Avatar src={avatar} alt={author} />
