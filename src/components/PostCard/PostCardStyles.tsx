@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { colors } from "../../styles/colors";
+import { tablet } from "../../styles/mixins";
 
 export const Card = styled.div`
   border-radius: 8px;
@@ -44,12 +45,17 @@ export const ShareButton = styled.button`
   text-decoration: none;
   background: none;
   border: none;
+  display: none;
   font-size: 18px;
   color: ${colors.color.red};
   cursor: pointer;
   padding: 8px;
   border-radius: 5px;
   transition: transform 0.3s ease;
+
+  ${tablet(`
+  display: flex;
+ `)}
 
   &:hover {
     color: ${colors.color.darkred};
@@ -109,6 +115,12 @@ export const FooterAction = styled.div`
   cursor: pointer;
   text-align: left;
   gap: 8px;
+
+  display: none;
+
+  ${tablet(`
+  display: flex;
+ `)}
 
   &:hover {
     color: #424242;

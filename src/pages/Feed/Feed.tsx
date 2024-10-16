@@ -3,11 +3,13 @@ import UserBoard from "../../components/UserBoard/UserBoard";
 import { CardWrapper, FeedWrapper } from "../Feed/FeedStyles";
 import PostCard from "../../components/PostCard/PostCard";
 import postData from "../../postData.json";
+import PrivacyToggle from "../../components/PrivacyButton/PrivacyButton";
 
 const Feed: React.FC = () => {
   return (
     <FeedWrapper>
       <UserBoard userIndex={1} />
+            <PrivacyToggle />
       <CardWrapper>
         {postData.posts.map((post, index) => (
           <PostCard

@@ -13,7 +13,6 @@ export const ProfileContainer = styled.div`
   gap: 24px;
 
   ${tablet(`
-
      margin-bottom: 0;
  `)}
 

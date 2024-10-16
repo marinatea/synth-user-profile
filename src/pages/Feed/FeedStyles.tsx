@@ -11,7 +11,6 @@ export const FeedWrapper = styled.div`
   gap: 24px;
 
   ${tablet(`
-    grid-template-columns: 1fr; 
     padding: 64px 64px;
   `)}
 
@@ -21,8 +20,13 @@ export const FeedWrapper = styled.div`
 `;
 
 export const CardWrapper = styled.div`
+  margin-top: 94px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(374px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 24px;
   padding: 0 24px;
+
+  ${tablet(`
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  `)}
 `;
