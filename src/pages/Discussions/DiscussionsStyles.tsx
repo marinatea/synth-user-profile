@@ -3,14 +3,14 @@ import { colors } from "../../styles/colors";
 import { desktop, tablet } from "../../styles/mixins";
 
 export const DiscussionsWrapper = styled.div`
-  padding: 54px 24px;
+padding: 54px 24px;
   background-color: ${colors.color.light};
   height: 100vh;
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
   position: absolute;
-  flex-direction: column;
 
   ${tablet(`
      padding: 64px 64px;

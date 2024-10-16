@@ -20,30 +20,25 @@ export const HeaderContainer = styled.header`
 
   ${tablet(`
     padding-inline: 50px;
-    padding-top: 24px;
-    flex-direction: column;
-    margin: 0 auto;
     height: 112px;
   `)}
 
   ${desktop(`
     padding-inline: 135px;
-    padding-top: 24px;
-    margin: 0 auto;
   `)}
 `;
 
 export const NavWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   width: 100%;
   gap: 23px;
 
   ${tablet(`
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   `)}
 `;
 
@@ -98,11 +93,11 @@ export const StyledNavLink = styled(NavLink)`
   }
 
   ${tablet(`
-  &::after {
-    transform-origin: center;
+    &::after {
+      transform-origin: center;
       background: ${colors.color.gradient};
-  }
-`)}
+    }
+  `)}
 `;
 
 export const UserActions = styled.div`

@@ -4,8 +4,12 @@ import { DiscussionsWrapper } from "./DiscussionsStyles";
 const Discussions: React.FC = () => {
   return (
     <DiscussionsWrapper>
-      <h1>Discussions</h1>
-      <p>This is the discussions page.</p>
+       <header>
+        <h1>Discussions</h1>
+      </header>
+      <main>
+        <p>This is the discussions page.</p>
+      </main>
     </DiscussionsWrapper>
   );
 };

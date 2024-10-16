@@ -4,7 +4,7 @@ import { tablet } from "../../styles/mixins";
 
 export const AddButtonStyles = styled.button`
   position: absolute;
-  right: 20px;
+  right: 8%;
   top: calc(240px);
   width: 64px;
   height: 64px;
@@ -24,9 +24,9 @@ export const AddButtonStyles = styled.button`
   }
 
   ${tablet(`
-  top: calc(80px);
-  width: 64px;
-  height: 64px;
+    top: calc(80px);
+    width: 64px;
+    height: 64px;
   `)}
 `;
 
