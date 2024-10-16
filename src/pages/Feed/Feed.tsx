@@ -7,24 +7,20 @@ import postData from "../../postData.json";
 const Feed: React.FC = () => {
   return (
     <FeedWrapper>
-      <aside>
-        <UserBoard userIndex={1} />
-      </aside>
-      <main>
-        <CardWrapper>
-          {postData.posts.map((post, index) => (
-            <PostCard
-              key={index}
-              author={post.author}
-              avatar={post.avatar}
-              title={post.title}
-              shareMethod={post.shareMethod || null}
-              likes={post.reactions?.likes ?? 0}
-              shares={post.reactions?.shares ?? 0}
-            />
-          ))}
-        </CardWrapper>
-      </main>
+      <UserBoard userIndex={1} />
+      <CardWrapper>
+        {postData.posts.map((post, index) => (
+          <PostCard
+            key={index}
+            author={post.author}
+            avatar={post.avatar}
+            title={post.title}
+            shareMethod={post.shareMethod || null}
+            likes={post.reactions?.likes ?? 0}
+            shares={post.reactions?.shares ?? 0}
+          />
+        ))}
+      </CardWrapper>
     </FeedWrapper>
   );
 };
