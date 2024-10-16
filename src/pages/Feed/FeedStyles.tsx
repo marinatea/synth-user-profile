@@ -6,17 +6,17 @@ export const FeedWrapper = styled.div`
   padding: 54px 24px;
   background-color: ${colors.color.light};
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  
 
   ${tablet(`
      padding: 64px 64px;
-     grid-template-columns: 2fr;
      gap: 47px; 
   `)}
 
   ${desktop(`
+    display: grid;
      padding: 72px 135px;
      grid-template-columns: 1fr 3fr;
   `)}

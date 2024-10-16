@@ -7,7 +7,7 @@ export const ProfileContainer = styled.div`
   flex-direction: column;
   align-items: center;
   border-radius: 8px;
-  width: 350px;
+  width: 100%;
   background-color: ${colors.color.light};
   margin-bottom: 24px;
 
@@ -128,7 +128,7 @@ export const EditProfileButton = styled.button`
 
 export const StatsContainer = styled.div`
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   width: 100%;
   margin-bottom: 24px;
   gap: 12%;
@@ -144,3 +144,7 @@ export const StatValue = styled.div`
   font-weight: bold;
   font-size: 16px;
 `;
+
+export const Bio = styled.p`
+width: 100%
+`
