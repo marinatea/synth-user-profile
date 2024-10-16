@@ -8,7 +8,6 @@ const Feed: React.FC = () => {
   return (
     <FeedWrapper>
       <UserBoard userIndex={1} />
-      {/* <Cards> */}
       <CardWrapper>
         {postData.posts.map((post, index) => (
           <PostCard
@@ -22,7 +21,6 @@ const Feed: React.FC = () => {
           />
         ))}
       </CardWrapper>
-      {/* </Cards> */}
     </FeedWrapper>
   );
 };
