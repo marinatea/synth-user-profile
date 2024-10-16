@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { colors } from "../../styles/colors";
-import { tablet } from "../../styles/mixins";
+import { desktop, tablet } from "../../styles/mixins";
 
 export const ProfileContainer = styled.div`
   display: flex;
@@ -10,9 +10,16 @@ export const ProfileContainer = styled.div`
   width: 100%;
   background-color: ${colors.color.light};
   margin-bottom: 24px;
+  gap: 24px;
 
   ${tablet(`
-    margin: 0;
+
+     margin-bottom: 0;
+ `)}
+
+  ${desktop(`
+     align-items: flex-start;
+      gap: 32px;
   `)}
 `;
 
@@ -81,8 +88,8 @@ export const MenuButton = styled.button`
   border: none;
   cursor: pointer;
   position: absolute;
-  top: 0;
-  right: -170%;
+  top: 2%;
+  right: -165%;
 `;
 
 export const Avatar = styled.img`
@@ -128,16 +135,25 @@ export const EditProfileButton = styled.button`
 
 export const StatsContainer = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  width: 100%;
+  align-items: center;
+  max-width: 30rem;
   margin-bottom: 24px;
-  gap: 12%;
+  gap: 24px;
+
+  ${desktop(`
+  align-items: start;
+  width: 80%;
+  `)}
 `;
 
 export const StatItem = styled.div`
   text-align: center;
   color: ${colors.color.primary};
   font-size: 16px;
+  display: flex;
+  gap: 5%;
 `;
 
 export const StatValue = styled.div`
@@ -145,6 +161,11 @@ export const StatValue = styled.div`
   font-size: 16px;
 `;
 
+export const SpanS = styled.span`
+  font-size: 16px;
+  font-weight: 400;
+`;
+
 export const Bio = styled.p`
-width: 100%
-`
+  width: 100%;
+`;

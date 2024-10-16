@@ -4,8 +4,9 @@ import { colors } from "../../styles/colors";
 export const Card = styled.div`
   border-radius: 8px;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  width: 374px;
-  height: 280px;
+  width: 100%;
+  flex-wrap: wrap;
+  // height: 280px;
   padding: 0px 24px 0px 24px;
   cursor: pointer;
   background-color: ${colors.color.white};
@@ -31,8 +32,8 @@ export const ShareMethod = styled.div`
   font-weight: 400;
   overflow: hidden;
   white-space: nowrap;
-  position: absolute;
   text-overflow: ellipsis;
+  position: absolute;
   top: 24px;
   max-width: 100%;
   display: flex;
@@ -77,16 +78,16 @@ export const Username = styled.span`
 `;
 
 export const Title = styled.h3`
-  font-size: 36px;
   overflow: hidden;
   text-overflow: ellipsis;
-  line-height: 43px;
+  font-size: 36px;
+  line-height: 42px;
 `;
 
 export const CardFooter = styled.div`
   display: flex;
   justify-content: space-between;
-  top: 10px;
+  padding: 24px 0;
 `;
 
 export const UserWrapper = styled.p`

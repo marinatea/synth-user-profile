@@ -42,14 +42,12 @@ const Header: React.FC<HeaderProps> = ({ userIndex }) => {
         >
           Feed
         </StyledNavLink>
-
         <StyledNavLink
           to="/explore"
           className={({ isActive }) => (isActive ? "active" : "")}
         >
           Explore
         </StyledNavLink>
-
         <StyledNavLink
           to="/discussions"
           className={({ isActive }) => (isActive ? "active" : "")}

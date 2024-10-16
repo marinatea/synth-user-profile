@@ -13,8 +13,7 @@ export const HeaderContainer = styled.header`
   padding-inline: 24px;
   padding-top: 24px;
   align-items: center;
-  min-width: 375px;
-  font-family: "Open Sans", sans-serif;
+  gap: 12px;
   position: relative;
   z-index: 1;
 
@@ -46,7 +45,6 @@ export const NavContainer = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 6px;
   width: 100%;
 
   ${tablet(`
@@ -59,7 +57,7 @@ export const StyledNavLink = styled(NavLink)`
   text-decoration: none;
   position: relative;
   color: ${colors.color.secondary};
-  padding-bottom: 19px;
+  padding-bottom: 16px;
   transition: color 0.3s ease;
   text-transform: uppercase;
 

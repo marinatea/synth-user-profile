@@ -1,11 +1,17 @@
 import styled, { keyframes } from "styled-components";
-import { tablet } from "../../styles/mixins";
+import { desktop, tablet } from "../../styles/mixins";
 import { colors } from "../../styles/colors";
 
 export const UserBarContainer = styled.div`
   display: flex;
-  align-items: center;
+  align-items: start;
   gap: 12px;
+  flex-direction: column;
+
+  ${tablet(`
+    align-items: center;
+    flex-direction: row;
+  `)}
 `;
 
 export const Avatar = styled.img`
@@ -22,6 +28,10 @@ export const Avatar = styled.img`
 export const UserName = styled.span`
   font-weight: bold;
   white-space: nowrap;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
 `;
 
 const shake = keyframes`
@@ -46,6 +56,11 @@ export const IconButton = styled.button`
   }
 `;
 
+export const IconWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
 export const IconButt = styled.button`
   background: none;
   border: none;
@@ -67,11 +82,17 @@ export const MenuContainer = styled.div<{ visible: boolean }>`
   z-index: 1;
   width: 176px;
   height: 124px;
-  right: 180px;
-  top: 55px;
+  right: 1rem;
+  top: 6.5rem;
 
   ${tablet(`
-     
+     right: 10rem;
+     top: 4rem;
+  `)}
+
+   ${desktop(`
+     right: 14rem;
+     top: 4rem;
   `)}
 `;
 

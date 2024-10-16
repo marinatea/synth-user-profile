@@ -20,7 +20,9 @@ import {
   MenuButton,
   AvatarWrapper,
   MenuContainer,
+
   Bio,
+  SpanS,
 } from "./UserBoardStyles";
 
 interface UserProfileProps {
@@ -76,19 +78,18 @@ const UserProfile: React.FC<UserProfileProps> = ({ userIndex }) => {
       </DataWrapper>
       <StatsContainer>
         <StatItem>
-          <StatValue>{user.synths}</StatValue>
-          synths
+          <StatValue>
+            {user.synths} <SpanS>synths</SpanS>
+          </StatValue>
+          <StatValue>
+            {user.followers} <SpanS>followers</SpanS>
+          </StatValue>
+          <StatValue>
+            {user.followings} <SpanS>following</SpanS>
+          </StatValue>
         </StatItem>
-        <StatItem>
-          <StatValue>{user.followers}</StatValue>
-          followers
-        </StatItem>
-        <StatItem>
-          <StatValue>{user.followings}</StatValue>
-          following
-        </StatItem>
+        <Bio>{user.bio}</Bio>
       </StatsContainer>
-      <Bio>{user.bio}</Bio>
     </ProfileContainer>
   );
 };

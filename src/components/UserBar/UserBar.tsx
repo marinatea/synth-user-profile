@@ -14,6 +14,7 @@ import {
   MenuContainer,
   ActionButton,
   IconButt,
+  IconWrapper,
 } from "./UserBarStyles";
 
 interface UserBarProps {
@@ -39,35 +40,39 @@ const UserBar: React.FC<UserBarProps> = ({ userName, avatarUrl }) => {
 
   return (
     <UserBarContainer>
-      <Avatar src={avatarUrl} alt="User avatar" />
-      <UserName>{userName}</UserName>
+      <UserName>
+        <Avatar src={avatarUrl} alt="User avatar" />
+        {userName}
+        <IconButt onClick={toggleMenu} aria-label="Toggle edit">
+          <img src={Arrow} alt="Arrow icon" />
+        </IconButt>
+        {menuVisible && (
+          <MenuContainer visible={menuVisible}>
+            <ActionButton onClick={() => handleMenuAction("report")}>
+              <img src={Edit} alt="report" />
+              Edit Profile
+            </ActionButton>
+            <ActionButton onClick={() => handleMenuAction("block")}>
+              <img src={Settings} alt="block" />
+              Settings
+            </ActionButton>
+          </MenuContainer>
+        )}
+      </UserName>
 
-      <IconButt onClick={toggleMenu} aria-label="Toggle edit">
-        <img src={Arrow} alt="Arrow icon" />
-      </IconButt>
-      {menuVisible && (
-        <MenuContainer visible={menuVisible}>
-          <ActionButton onClick={() => handleMenuAction("report")}>
-            <img src={Edit} alt="report" />
-            Edit Profile
-          </ActionButton>
-          <ActionButton onClick={() => handleMenuAction("block")}>
-            <img src={Settings} alt="block" />
-            Settings
-          </ActionButton>
-        </MenuContainer>
-      )}
-      <IconButton aria-label="Notifications">
-        <img src={Notifications} alt="Notifications icon" />
-      </IconButton>
+      <IconWrapper>
+        <IconButton aria-label="Notifications">
+          <img src={Notifications} alt="Notifications icon" />
+        </IconButton>
 
-      <IconButton aria-label="Share">
-        <img src={Share} alt="Share icon" />
-      </IconButton>
+        <IconButton aria-label="Share">
+          <img src={Share} alt="Share icon" />
+        </IconButton>
 
-      <IconButton aria-label="Medium">
-        <img src={Medium} alt="Medium icon" />
-      </IconButton>
+        <IconButton aria-label="Medium">
+          <img src={Medium} alt="Medium icon" />
+        </IconButton>
+      </IconWrapper>
     </UserBarContainer>
   );
 };

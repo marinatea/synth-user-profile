@@ -13,7 +13,7 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'Open Sans', sans-serif;
     line-height: 1.5; 
     color: ${colors.color.primary}; 
-    background-color: ${colors.color.white};
+  background-color: ${colors.color.light};
   }
 
   h1, h2, h3, h4, h5, h6 {
