@@ -16,6 +16,7 @@ import Play from "../../assets/icons/icon_play.svg";
 import Like from "../../assets/icons/icon_like.svg";
 import { colors } from "../../styles/colors";
 import Link from "../../assets/icons/icon_link.svg";
+
 interface PostCardProps {
   author: string;
   avatar: string;
@@ -39,7 +40,7 @@ const PostCard: React.FC<PostCardProps> = ({
   const renderShareMethod = (label: string) => {
     const parts = label.split(" ");
     return (
-      <>
+      <ShareMethod>
         {parts.map((part, index) => (
           <span key={index}>
             {part.startsWith("#") ? (
@@ -50,7 +51,7 @@ const PostCard: React.FC<PostCardProps> = ({
             {index < parts.length - 1 && " "}
           </span>
         ))}
-      </>
+      </ShareMethod>
     );
   };
 
@@ -59,7 +60,9 @@ const PostCard: React.FC<PostCardProps> = ({
       <CardHeader>
         {shareMethod && (
           <ShareMethod>
-            {shareMethod.type === "weblink" && <img src={Link} alt="link" />}
+            {shareMethod.type === "weblink" && (
+              <img src={Link} alt="Link icon" />
+            )}
             {renderShareMethod(shareMethod.label)}
           </ShareMethod>
         )}
@@ -67,23 +70,23 @@ const PostCard: React.FC<PostCardProps> = ({
       </CardHeader>
       <CardFooter>
         <UserWrapper>
-          <Avatar src={avatar} alt={author} />
+          <Avatar src={avatar} alt={`Avatar of ${author}`} />
           <Username>{author}</Username>
         </UserWrapper>
         <InterWrapper>
-          {shares !== 0 && (
+          {shares ? (
             <FooterAction>
-              <img src={Play} alt="share" />
+              <img src={Play} alt="Share icon" />
               {shares}
             </FooterAction>
-          )}
-          {likes !== 0 && (
+          ) : null}
+          {likes ? (
             <FooterAction>
-              <img src={Like} alt="like" />
+              <img src={Like} alt="Like icon" />
               {likes}
             </FooterAction>
-          )}
-          {shares === 0 && likes === 0 && (
+          ) : null}
+          {!shares && !likes && (
             <FooterAction>
               <ShareButton>Share</ShareButton>
             </FooterAction>

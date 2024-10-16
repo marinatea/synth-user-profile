@@ -6,10 +6,9 @@ export const Card = styled.div`
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   width: 374px;
   height: 280px;
-  padding: 0px 24px 0px 24px;
+  padding: 0 24px;
   cursor: pointer;
   background-color: ${colors.color.white};
-
   transition: transform 0.3s ease;
 
   &:hover {
@@ -19,10 +18,9 @@ export const Card = styled.div`
 `;
 
 export const CardHeader = styled.div`
-  padding: 56px 0px 24px 0px;
+  padding: 56px 0 24px 0;
   height: 232px;
   overflow: hidden;
-  gap: 10px;
   position: relative;
 `;
 
@@ -48,7 +46,7 @@ export const ShareButton = styled.button`
   cursor: pointer;
   padding: 8px;
   border-radius: 5px;
-  transition: transform 0.3s ease;
+  transition: color 0.3s ease;
 
   &:hover {
     color: ${colors.color.darkred};
@@ -69,7 +67,7 @@ export const Avatar = styled.img`
 
 export const Username = styled.span`
   font-weight: bold;
-  transition: transform 0.2s ease;
+  transition: color 0.2s ease;
 
   &:hover {
     color: ${colors.color.black};
@@ -89,12 +87,13 @@ export const CardFooter = styled.div`
   top: 10px;
 `;
 
-export const UserWrapper = styled.p`
+export const UserWrapper = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
 `;
-export const InterWrapper = styled.p`
+
+export const InterWrapper = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
