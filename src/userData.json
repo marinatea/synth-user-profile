@@ -2,9 +2,9 @@
   "users": [
     {
       "id": 1,
-      "firstName": "Arthur",
-      "lastName": "Wood",
-      "tag": "@arthurwood",
+      "firstName": "Witold",
+      "lastName": " Czerwony",
+      "tag": "@witekczerw",
       "synths": 12,
       "followers": 250,
       "followings": 180,
@@ -13,9 +13,9 @@
     },
     {
       "id": 2,
-      "firstName": "Benjamin",
-      "lastName": "Clementine",
-      "tag": "@benclementine",
+      "firstName": "Miau",
+      "lastName": "Mistrz",
+      "tag": "@miauuu",
       "synths": 45,
       "followers": 110,
       "followings": 322,
@@ -30,7 +30,7 @@
       "synths": 20,
       "followers": 300,
       "followings": 200,
-      "avatarUrl": "/img/piggy.jfif",
+      "avatarUrl": "/img/piggy.png",
       "bio": "Cryptocurrencies including Ethereum, Ripple, and Litecoin have all plunged between 20 to 30 percent each, according to CoinMarketCap. Here is the latest Ripple price news and live updates on XRP, bitcoin and Ethereum."
     }
   ]

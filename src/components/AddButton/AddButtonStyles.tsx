@@ -13,11 +13,15 @@ export const AddButtonStyles = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
   color: ${colors.color.white};
   font-size: 24px;
   border: none;
   cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
 
   ${tablet(`
   top: calc(80px);

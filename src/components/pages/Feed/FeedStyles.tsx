@@ -9,7 +9,7 @@ export const FeedWrapper = styled.div`
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  overflow: auto;
+  overflow: scroll;
   align-content: flex-start;
   margin: 0 auto;
 
@@ -17,6 +17,7 @@ export const FeedWrapper = styled.div`
      padding: 64px 64px;
      grid-template-columns: 2fr;
      gap: 47px;
+     
   `)}
 
   ${desktop(`

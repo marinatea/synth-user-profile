@@ -15,8 +15,9 @@ const Feed: React.FC = () => {
             author={post.author}
             avatar={post.avatar}
             title={post.title}
-            likes={post.likes}
-            shares={post.shares}
+            shareMethod={post.shareMethod || null}
+            likes={post.reactions?.likes ?? 0}
+            shares={post.reactions?.shares ?? 0}
           />
         ))}
       </CardWrapper>
