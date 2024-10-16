@@ -13,7 +13,6 @@ export const ProfileContainer = styled.div`
   gap: 24px;
 
   ${tablet(`
-
      margin-bottom: 0;
  `)}
 
@@ -38,6 +37,7 @@ export const AvatarWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   position: relative;
+  gap: 24px;
 `;
 
 export const MenuContainer = styled.div<{ visible: boolean }>`
@@ -48,15 +48,14 @@ export const MenuContainer = styled.div<{ visible: boolean }>`
   background-color: ${colors.color.white};
   border-radius: 8px;
   position: absolute;
-  right: -190px;
-  top: 38px;
-  z-index: 1;
+  z-index: -99;
   width: 176px;
   height: 124px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 
-  ${tablet(`
-     right: -355px;
+  ${desktop(`
+    z-index: 1;
+     right: -66%;
      top: 30px;
   `)}
 `;
@@ -88,8 +87,13 @@ export const MenuButton = styled.button`
   border: none;
   cursor: pointer;
   position: absolute;
-  top: 2%;
-  right: -165%;
+  z-index: -99;
+
+  ${desktop(`
+     z-index: 2;
+     right: -10%;
+     top: 2%;
+  `)}
 `;
 
 export const Avatar = styled.img`

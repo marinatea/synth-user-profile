@@ -7,7 +7,7 @@ export const colors = {
     light: "#ECF1F8",
     violet: "#C5ADEF",
     red: "#ED5267",
-    hover: "#e0e0e0",
+    hover: "##ecf1f8",
     white: "#ffffff",
     black: "#000",
     darkred: "#8b0000",
