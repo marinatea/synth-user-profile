@@ -4,8 +4,12 @@ import { ExploreWrapper } from "./ExploreStyles";
 const Explore: React.FC = () => {
   return (
     <ExploreWrapper>
-      <h1>Discussions</h1>
-      <p>This is the discussions page.</p>
+      <header>
+        <h1>Explore</h1>
+      </header>
+      <main>
+        <p>This is the explore page.</p>
+      </main>
     </ExploreWrapper>
   );
 };
