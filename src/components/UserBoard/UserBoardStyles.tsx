@@ -110,6 +110,7 @@ export const EditProfileButton = styled.button`
   border: none;
   cursor: pointer;
   display: flex;
+  gap: 8px;
   align-items: center;
   margin-bottom: 24px;
   text-decoration: underline;

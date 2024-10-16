@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import userData from "../../userData.json";
-import Edit from "../../assets/icons/icon_edit.svg";
+import Edit from "../../assets/icons/editred.svg";
 import Menu from "../../assets/icons/icon_3dots.svg";
 import Report from "../../assets/icons/report.svg";
 import Block from "../../assets/icons/hide.svg";
