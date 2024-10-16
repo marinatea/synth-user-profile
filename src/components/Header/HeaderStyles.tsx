@@ -13,7 +13,6 @@ export const HeaderContainer = styled.header`
   padding-inline: 24px;
   padding-top: 24px;
   align-items: center;
-  margin: 0 auto;
   min-width: 375px;
   font-family: "Open Sans", sans-serif;
   position: relative;
@@ -57,7 +56,7 @@ export const NavContainer = styled.nav`
 
   ${tablet(`
     flex-direction: row;
-   gap: 36px;
+    gap: 36px;
   `)}
 `;
 
