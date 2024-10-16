@@ -20,7 +20,6 @@ import {
   MenuButton,
   AvatarWrapper,
   MenuContainer,
-
   Bio,
   SpanS,
 } from "./UserBoardStyles";
@@ -51,9 +50,18 @@ const UserProfile: React.FC<UserProfileProps> = ({ userIndex }) => {
       <DataWrapper>
         <AvatarWrapper>
           <Avatar src={user.avatarUrl} alt="avatar" />
-          <MenuButton onClick={toggleMenu}>
-            <img src={Menu} alt="menu" />
-          </MenuButton>
+          <DataBlock>
+            <UserName>{`${user.firstName} ${user.lastName}`}</UserName>{" "}
+            <MenuButton onClick={toggleMenu}>
+              <img src={Menu} alt="menu" />
+            </MenuButton>
+            <UserHandle>{user.tag}</UserHandle>
+            <EditProfileButton>
+              <img src={Edit} alt="edit" />
+              Edit profile
+            </EditProfileButton>
+          </DataBlock>
+
           {menuVisible && (
             <MenuContainer visible={menuVisible}>
               <ActionButton onClick={() => handleMenuAction("report")}>
@@ -67,14 +75,6 @@ const UserProfile: React.FC<UserProfileProps> = ({ userIndex }) => {
             </MenuContainer>
           )}
         </AvatarWrapper>
-        <DataBlock>
-          <UserName>{`${user.firstName} ${user.lastName}`}</UserName>
-          <UserHandle>{user.tag}</UserHandle>
-          <EditProfileButton>
-            <img src={Edit} alt="edit" />
-            Edit profile
-          </EditProfileButton>
-        </DataBlock>
       </DataWrapper>
       <StatsContainer>
         <StatItem>
