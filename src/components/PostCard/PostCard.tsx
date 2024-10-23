@@ -43,11 +43,10 @@ const PostCard: React.FC<PostCardProps> = ({
         {parts.map((part, index) => (
           <span key={index}>
             {part.startsWith("#") ? (
-              <span style={{ background: colors.color.hover }}>{part}</span>
+              <span style={{ background: colors.color.secondary }}>{part}</span>
             ) : (
               part
             )}
-            {index < parts.length - 1 && " "}
           </span>
         ))}
       </>
